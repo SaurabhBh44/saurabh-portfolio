@@ -8,8 +8,10 @@ body {
 
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px 100px 20px;
   background: #ffffff;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .hero h1 {
@@ -23,9 +25,10 @@ body {
 }
 
 .tagline {
-  max-width: 640px;
-  margin: 20px auto;
+  max-width: 600px;
+  margin: 20px auto 30px auto;
   color: #555;
+  font-size: 18px;
 }
 
 .button {
@@ -97,3 +100,4 @@ footer {
   font-size: 14px;
   color: #777;
 }
+
