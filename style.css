@@ -92,10 +92,22 @@ body {
 
 /* SKILLS GRID */
 
-.skills {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skill-group h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.skill-group p {
+  font-size: 15px;
+  color: #555;
+  margin: 0;
 }
 
 .skills div {
@@ -158,4 +170,5 @@ footer {
   margin-bottom: 10px;
   font-size: 16px;
 }
+
 
