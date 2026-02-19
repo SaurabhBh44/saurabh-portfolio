@@ -12,7 +12,7 @@ body {
   padding: 0 20px;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero {
   text-align: center;
@@ -83,14 +83,12 @@ body {
   margin-top: 8px;
 }
 
-/* PARAGRAPHS */
-
 .section p {
   max-width: 750px;
   font-size: 17px;
 }
 
-/* SKILLS GRID */
+/* SKILLS */
 
 .skills-grid {
   display: grid;
@@ -110,22 +108,7 @@ body {
   margin: 0;
 }
 
-.skills div {
-  background: white;
-  padding: 16px;
-  text-align: center;
-  border-radius: 8px;
-  border: 1px solid #e4e8ef;
-  font-weight: 500;
-  transition: 0.2s ease;
-}
-
-.skills div:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-/* PROJECT CARDS */
+/* EXPERIENCE */
 
 .card {
   background: white;
@@ -139,6 +122,16 @@ body {
 
 .card:hover {
   box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.experience-list {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 /* CONTACT */
@@ -161,16 +154,3 @@ footer {
   font-size: 14px;
   color: #777;
 }
-
-.experience-list {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-.experience-list li {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-
-
