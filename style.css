@@ -266,6 +266,48 @@ body {
   color: white;
 }
 
+/* CERTIFICATIONS */
+
+.cert-card {
+  background: white;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  border: 1px solid #e4e8ef;
+  transition: 0.3s ease;
+}
+
+.cert-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-header a {
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid #111184;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #111184;
+}
+
+.cert-header a:hover {
+  background: #111184;
+  color: white;
+}
+
+.cert-image {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
 
 
 
