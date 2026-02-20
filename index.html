@@ -5,7 +5,19 @@
   <title>Saurabh Bhadra | Business Intelligence Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Business Intelligence Developer specialising in Power BI, SQL, DAX and reporting automation. Delivering KPI-driven enterprise dashboards and operational performance insights.">
+  <!-- SEO -->
+  <meta name="description" content="Business Intelligence Developer specialising in Power BI, SQL, DAX and reporting automation. Delivering KPI-driven dashboards and enterprise performance insights.">
+  <meta name="keywords" content="Power BI Developer, Business Intelligence Developer, SQL Developer, DAX, Reporting Automation, Data Analyst">
+  <meta name="author" content="Saurabh Bhadra">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Saurabh Bhadra | Business Intelligence Developer">
+  <meta property="og:description" content="Enterprise BI dashboards, KPI reporting and automation specialist.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saurabhbh44.github.io/saurabh-portfolio/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -13,10 +25,18 @@
 
 <body>
 
+<!-- Scroll Progress Bar -->
+<div id="progress-bar"></div>
+
 <nav class="navbar">
   <div class="container nav-container">
     <div class="logo">SB</div>
-    <div class="hamburger" id="hamburger">☰</div>
+
+    <div class="nav-actions">
+      <button id="theme-toggle">🌙</button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+
     <div class="nav-links" id="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -61,81 +81,11 @@
     <p>
       Business Intelligence Developer with 6+ years of experience delivering KPI-driven dashboards,
       enterprise reporting solutions, and automated workflows using Power BI, SQL, DAX and Power Query.
-      Experienced in stakeholder collaboration, secure data integration, and operational performance optimisation.
     </p>
   </div>
 </section>
 
-<section class="section reveal" id="skills">
-  <div class="container">
-    <h2>Core Skills</h2>
-
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Data Analysis & Experimental Methods</h3>
-        <p>Data Analysis, Experimental Design (PoC), Operational Efficiency, Advanced Analytics</p>
-      </div>
-
-      <div class="skill-group">
-        <h3>Business Intelligence & Reporting</h3>
-        <p>Power BI, DAX, SSRS, Azure Analysis Services</p>
-      </div>
-
-      <div class="skill-group">
-        <h3>Data Engineering & Integration</h3>
-        <p>SQL, Databases, Power Query</p>
-      </div>
-
-      <div class="skill-group">
-        <h3>Automation & App Development</h3>
-        <p>Power Automate, Power Apps</p>
-      </div>
-
-      <div class="skill-group">
-        <h3>Programming & Technical Foundations</h3>
-        <p>Python, Excel (VBA), HTML5, CSS3, GitHub Pages</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section reveal" id="projects">
-  <div class="container">
-    <h2>Featured Projects</h2>
-
-    <div class="project-card">
-      <h3>Enterprise KPI Dashboard</h3>
-      <p>Designed and deployed end-to-end Power BI dashboard monitoring SLA performance and operational KPIs across multiple sites.</p>
-    </div>
-
-    <div class="project-card">
-      <h3>Automated Reporting Workflow</h3>
-      <p>Built Power Automate workflows reducing manual reporting processes by 85% and improving reporting accuracy.</p>
-    </div>
-
-    <div class="project-card">
-      <h3>Multi-Source Data Consolidation</h3>
-      <p>Integrated restricted and multi-source datasets into a secure centralised BI environment for executive reporting.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section reveal" id="experience">
-  <div class="container">
-    <h2>Experience</h2>
-
-    <div class="card">
-      <h3>Business Intelligence Developer — Serco (2022–Present)</h3>
-      <ul>
-        <li>Developed enterprise Power BI dashboards monitoring KPIs and SLAs.</li>
-        <li>Reduced reporting cycle time by 85% through automation.</li>
-        <li>Designed secure multi-site reporting solutions.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section contact reveal" id="contact">
+<section class="section reveal" id="contact">
   <div class="container">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:saurabh.bhadra1191@gmail.com">saurabh.bhadra1191@gmail.com</a></p>
@@ -150,6 +100,7 @@
 </footer>
 
 <script>
+  // Hamburger
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
 
@@ -157,9 +108,8 @@
     navLinks.classList.toggle('active');
   });
 
-  // Scroll reveal animation
+  // Scroll Reveal
   const reveals = document.querySelectorAll(".reveal");
-
   function revealOnScroll() {
     const windowHeight = window.innerHeight;
     reveals.forEach(el => {
@@ -169,9 +119,23 @@
       }
     });
   }
-
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
+
+  // Scroll Progress Bar
+  window.onscroll = function () {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    document.getElementById("progress-bar").style.width = scrolled + "%";
+  };
+
+  // Light/Dark Toggle
+  const toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
 </script>
 
 </body>
