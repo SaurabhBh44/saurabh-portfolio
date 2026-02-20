@@ -33,7 +33,11 @@ body {
 .logo {
   font-weight: 700;
   font-size: 18px;
-  color: #2563eb;
+  color: #111184;
+}
+
+.nav-links {
+  display: flex;
 }
 
 .nav-links a {
@@ -51,7 +55,7 @@ body {
   height: 2px;
   left: 0;
   bottom: -6px;
-  background-color: #2563eb;
+  background-color: #111184;
   transition: width 0.3s ease;
 }
 
@@ -59,11 +63,17 @@ body {
   width: 100%;
 }
 
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 /* HERO */
 
 .hero {
   text-align: center;
-  padding: 140px 20px 110px 20px;
+  padding: 150px 20px 110px 20px;
   background: #ffffff;
 }
 
@@ -81,32 +91,15 @@ body {
 
 .tagline {
   max-width: 650px;
-  margin: 0 auto 35px auto;
+  margin: 0 auto;
   color: #555;
   font-size: 18px;
-}
-
-/* BUTTON */
-
-.button {
-  display: inline-block;
-  padding: 13px 30px;
-  background-color: #2563eb;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.button:hover {
-  background-color: #1e4fd8;
 }
 
 /* IMPACT STRIP */
 
 .impact-strip {
-  background: #2563eb;
+  background: #111184;
   color: white;
   padding: 50px 0;
 }
@@ -121,11 +114,6 @@ body {
 .impact-grid h3 {
   font-size: 32px;
   margin-bottom: 8px;
-}
-
-.impact-grid p {
-  font-size: 14px;
-  opacity: 0.9;
 }
 
 /* SECTIONS */
@@ -151,13 +139,8 @@ body {
   display: block;
   width: 40px;
   height: 3px;
-  background: #2563eb;
+  background: #111184;
   margin-top: 8px;
-}
-
-.section p {
-  max-width: 750px;
-  font-size: 17px;
 }
 
 /* SKILLS */
@@ -174,12 +157,6 @@ body {
   margin-bottom: 10px;
 }
 
-.skill-group p {
-  font-size: 15px;
-  color: #555;
-  margin: 0;
-}
-
 /* EXPERIENCE */
 
 .card {
@@ -188,28 +165,13 @@ body {
   margin-bottom: 22px;
   border-radius: 10px;
   border: 1px solid #e4e8ef;
-  border-left: 4px solid #2563eb;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-}
-
-.experience-list {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-.experience-list li {
-  margin-bottom: 10px;
-  font-size: 16px;
+  border-left: 4px solid #111184;
 }
 
 /* CONTACT */
 
 .contact a {
-  color: #2563eb;
+  color: #111184;
   text-decoration: none;
 }
 
@@ -217,12 +179,29 @@ body {
   text-decoration: underline;
 }
 
-/* FOOTER */
+/* MOBILE */
 
-footer {
-  text-align: center;
-  padding: 45px 0;
-  background: #ffffff;
-  font-size: 14px;
-  color: #777;
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #e4e8ef;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
