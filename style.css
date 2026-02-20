@@ -41,10 +41,22 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  position: relative;
 }
 
-.nav-links a:hover {
-  color: #2563eb;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 /* HERO */
@@ -89,6 +101,31 @@ body {
 
 .button:hover {
   background-color: #1e4fd8;
+}
+
+/* IMPACT STRIP */
+
+.impact-strip {
+  background: #2563eb;
+  color: white;
+  padding: 50px 0;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+  gap: 30px;
+}
+
+.impact-grid h3 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.impact-grid p {
+  font-size: 14px;
+  opacity: 0.9;
 }
 
 /* SECTIONS */
