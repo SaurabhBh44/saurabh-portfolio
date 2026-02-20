@@ -3,14 +3,14 @@ body {
   margin: 0;
   background-color: #f4f6f9;
   color: #1c1c1c;
-  line-height: 1.7;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
 .container {
-  max-width: 1050px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 /* NAVIGATION */
@@ -27,12 +27,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75px;
+  height: 70px;
 }
 
 .logo {
-  font-weight: 800;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 18px;
   color: #111184;
 }
 
@@ -41,15 +41,26 @@ body {
 }
 
 .nav-links a {
-  margin-left: 30px;
+  margin-left: 25px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s ease;
+  position: relative;
 }
 
-.nav-links a:hover {
-  color: #111184;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background-color: #111184;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .hamburger {
@@ -62,27 +73,27 @@ body {
 
 .hero {
   text-align: center;
-  padding: 170px 20px 120px 20px;
+  padding: 150px 20px 110px 20px;
   background: #ffffff;
 }
 
 .hero h1 {
-  font-size: 56px;
-  font-weight: 800;
-  margin-bottom: 18px;
+  font-size: 52px;
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
 .subtitle {
   font-size: 18px;
-  color: #666;
+  color: #555;
   margin-bottom: 25px;
 }
 
 .tagline {
   max-width: 650px;
   margin: 0 auto;
-  font-size: 18px;
   color: #555;
+  font-size: 18px;
 }
 
 /* IMPACT STRIP */
@@ -90,26 +101,25 @@ body {
 .impact-strip {
   background: #111184;
   color: white;
-  padding: 60px 0;
+  padding: 50px 0;
 }
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   text-align: center;
   gap: 30px;
 }
 
 .impact-grid h3 {
-  font-size: 34px;
+  font-size: 32px;
   margin-bottom: 8px;
-  font-weight: 800;
 }
 
 /* SECTIONS */
 
 .section {
-  padding: 100px 0;
+  padding: 90px 0;
 }
 
 .section:nth-child(even) {
@@ -117,9 +127,20 @@ body {
 }
 
 .section h2 {
-  font-size: 30px;
-  margin-bottom: 40px;
-  font-weight: 800;
+  font-size: 28px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #111184;
+  margin-top: 8px;
 }
 
 /* SKILLS */
@@ -127,7 +148,7 @@ body {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  gap: 30px;
 }
 
 .skill-group h3 {
@@ -136,30 +157,15 @@ body {
   margin-bottom: 10px;
 }
 
-/* PROJECTS */
-
-.project-card {
-  background: white;
-  padding: 30px;
-  margin-bottom: 25px;
-  border-radius: 12px;
-  border: 1px solid #e4e8ef;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
 /* EXPERIENCE */
 
 .card {
   background: white;
-  padding: 30px;
-  border-radius: 12px;
-  border-left: 5px solid #111184;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+  padding: 28px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  border: 1px solid #e4e8ef;
+  border-left: 4px solid #111184;
 }
 
 /* CONTACT */
@@ -173,19 +179,6 @@ body {
   text-decoration: underline;
 }
 
-/* SCROLL REVEAL */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* MOBILE */
 
 @media (max-width: 768px) {
@@ -194,9 +187,9 @@ body {
     flex-direction: column;
     background: white;
     position: absolute;
-    top: 75px;
+    top: 70px;
     right: 0;
-    width: 220px;
+    width: 200px;
     border: 1px solid #e4e8ef;
   }
 
@@ -210,9 +203,5 @@ body {
 
   .hamburger {
     display: block;
-  }
-
-  .hero h1 {
-    font-size: 40px;
   }
 }
