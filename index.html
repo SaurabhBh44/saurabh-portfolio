@@ -8,10 +8,12 @@
   <!-- SEO -->
   <meta name="description" content="Business Intelligence Developer specialising in Power BI, SQL, DAX and reporting automation. Delivering KPI-driven enterprise dashboards and operational performance insights.">
 
-  <!-- Open Graph (LinkedIn preview) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Saurabh Bhadra | Business Intelligence Developer">
   <meta property="og:description" content="Enterprise BI dashboards, KPI reporting, and reporting automation specialist.">
   <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.ico">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -22,7 +24,12 @@
 <nav class="navbar">
   <div class="container nav-container">
     <div class="logo">SB</div>
-    <div class="nav-links">
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <div class="nav-links" id="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
@@ -36,9 +43,9 @@
     <h1>Saurabh Bhadra</h1>
     <p class="subtitle">Business Intelligence Developer | Power BI | SQL | Reporting Automation</p>
     <p class="tagline">
-      Delivering enterprise-grade BI dashboards and automated reporting solutions that reduce reporting time and improve decision-making.
+      Delivering enterprise-grade BI dashboards and automated reporting
+      solutions that reduce reporting time and improve decision-making.
     </p>
-    <a href="#experience" class="button">View Experience</a>
   </div>
 </header>
 
@@ -132,21 +139,20 @@
     <div class="card">
       <h3>Business Intelligence Developer — Serco (2022–Present)</h3>
       <ul class="experience-list">
-        <li>Developed and deployed end-to-end Power BI dashboards monitoring operational KPIs and contractual SLAs.</li>
+        <li>Developed end-to-end Power BI dashboards monitoring operational KPIs and SLAs.</li>
         <li>Reduced reporting cycle time by 85% through automation and workflow optimisation.</li>
-        <li>Designed secure multi-site performance reporting solutions consolidating restricted datasets.</li>
-        <li>Collaborated with stakeholders to translate complex data into decision-ready insights.</li>
+        <li>Designed secure multi-site reporting solutions consolidating restricted datasets.</li>
+        <li>Translated complex datasets into decision-ready stakeholder insights.</li>
         <li>Optimised Power Automate workflows improving operational reporting efficiency.</li>
-        <li>Maintained version control and documentation standards using GitHub Enterprise.</li>
       </ul>
     </div>
 
     <div class="card">
       <h3>Marketplace Team Lead & Analyst — Pickworth Enterprises (2018–2019)</h3>
       <ul class="experience-list">
-        <li>Analysed marketplace pricing trends across Amazon, Walmart and eBay.</li>
-        <li>Developed consolidated profitability dashboards integrating 19 sales channels.</li>
-        <li>Improved agent performance leading to customer satisfaction increase to 89%.</li>
+        <li>Analysed pricing trends across Amazon, Walmart and eBay.</li>
+        <li>Developed profitability dashboards integrating 19 sales channels.</li>
+        <li>Improved agent performance increasing customer satisfaction to 89%.</li>
       </ul>
     </div>
 
@@ -174,6 +180,15 @@
     <p>© 2026 Saurabh Bhadra</p>
   </div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
