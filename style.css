@@ -220,6 +220,54 @@ body {
   }
 }
 
+/* PROJECTS */
+
+.project-card {
+  background: white;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  border: 1px solid #e4e8ef;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-summary {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.project-details {
+  margin-top: 20px;
+  display: none;
+}
+
+.toggle-btn {
+  background: none;
+  border: 1px solid #111184;
+  color: #111184;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.toggle-btn:hover {
+  background: #111184;
+  color: white;
+}
+
+
+
 
 
 
