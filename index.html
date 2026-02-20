@@ -265,10 +265,24 @@
     let scrolled = (winScroll / height) * 100;
     document.getElementById("progress-bar").style.width = scrolled + "%";
   };
+
+// Project Toggle
+const buttons = document.querySelectorAll(".toggle-btn");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const details = button.parentElement.nextElementSibling.nextElementSibling;
+    const isVisible = details.style.display === "block";
+    details.style.display = isVisible ? "none" : "block";
+    button.textContent = isVisible ? "View Details" : "Hide Details";
+  });
+});
+  
 </script>
 
 </body>
 </html>
+
 
 
 
